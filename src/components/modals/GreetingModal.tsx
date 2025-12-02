@@ -54,7 +54,7 @@ export default function GreetingModal({ open, onClose, greetingText }: GreetingM
         <TextField
           fullWidth
           multiline
-          rows={{ xs: 10, sm: 12 }}
+          rows={12}
           value={greetingText}
           InputProps={{
             readOnly: true,
@@ -63,6 +63,9 @@ export default function GreetingModal({ open, onClose, greetingText }: GreetingM
             '& .MuiInputBase-input': {
               fontFamily: 'monospace',
               fontSize: { xs: '0.75rem', sm: '0.875rem' },
+            },
+            '& .MuiInputBase-root': {
+              minHeight: { xs: '200px', sm: '240px' },
             },
           }}
         />
